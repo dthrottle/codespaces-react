@@ -7,8 +7,10 @@ function App() {
 
   const [feedback, setFeedback] = useState(FeedbackData)
 
-  const handleClick = () => {
-    setFeedback({})
+  const deleteFeedback = (item) => {
+    setFeedback({feedback.filter(
+      
+    )})
   }
 
   return (
