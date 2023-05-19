@@ -7,13 +7,16 @@ function App() {
 
   const [feedback, setFeedback] = useState(FeedbackData)
 
-  const handleClick = () => {
-    setFeedback({})
+  const deleteFeedback = (id) => {
+    if (window.confirm('Are you sure you want to delete?')) {
+      setFeedback(feedback.filter((item) => 
+        item.id !== id))
+      }
   }
 
   return (
     <div className="App">
-      <FeedbackList onclick={handleClick} feedback={feedback}/>
+      <FeedbackList handleDelete={deleteFeedback} feedback={feedback}/>
     </div>
   );
 }
