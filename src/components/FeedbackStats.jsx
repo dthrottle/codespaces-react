@@ -22,4 +22,8 @@ FeedbackStats.propTypes = {
     average: PropTypes.number.isRequired
 }
 
+FeedbackStats.defaultProps = {
+    average: 5
+}
+
 export default FeedbackStats
